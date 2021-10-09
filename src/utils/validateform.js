@@ -28,7 +28,6 @@ const validateform = (values) =>{
 		errors.cnfrmpassword = "it should be match with password";
 	}
 
-
 	return errors;
 }
 export default validateform;
