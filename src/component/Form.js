@@ -4,13 +4,12 @@ import './Form.css';
 import useForm from '../hooks/useForm.js';
 import validateform from '../utils/validateform.js';
 
-const Form = () =>{
+const Form = (props) =>{
+	const {handleevent,values,handlesubmit,errors} = useForm(validateform,props);
 
-	const {handleevent,values,handlesubmit,errors} = useForm(validateform);
-		
   return(
     <div className="form_container">
-     <h1 className="form_header">Login</h1>
+     <p className="form_header">Login</p>
 	    <form className='form' onSubmit={handlesubmit}>
 		    <div className="form_field">
 		    	<label className="form_label" htmlFor='name'>Enter your Name</label>

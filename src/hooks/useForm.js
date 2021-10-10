@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
+import { useHistory } from 'react-router-dom';
 
-const useForm = (validateform) =>{
+const useForm = (validateform,props) =>{
 
 	const [values,setValues] = useState({
 		name:"",
@@ -22,7 +23,15 @@ const useForm = (validateform) =>{
 	};
 	const handlesubmit = (e) => {
 		e.preventDefault();
-		setErrors(validateform(values));
+		const err_list = validateform(values);
+		if(Object.keys(err_list).length === 0){
+			setErrors(err_list);
+			props.onSearchSubmit(true,values);
+
+		}
+		else{
+			setErrors(err_list);
+		}
 	}
 
 	return{handleevent,values,handlesubmit,errors};

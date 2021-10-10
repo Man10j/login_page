@@ -18,8 +18,7 @@ background: linear-gradient(to right, #F56217, #0B486B); /* W3C, IE 10+/ Edge, F
     align-items: center;
 }
 .form_label{
-	font-size: 10px; 
-	font-weight: bold;
+	font-size: 10px;
 	color: #fff;
 	font-family: 'Arial';
 	text-align: left;
@@ -52,8 +51,9 @@ background: linear-gradient(to right, #F56217, #0B486B); /* W3C, IE 10+/ Edge, F
     font-size: 11px;
 }
 .form_header{
-        text-align: center;
-    font-size: 46px;
+    text-align: center;
+    font-size: 52px;
+    margin: 10px;
     font-family: arial;
     color: rgba(1,1,1,0.5);
 }
